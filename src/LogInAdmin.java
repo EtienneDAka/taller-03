@@ -1,4 +1,4 @@
-public class LogInAdmin extends LogIn {
+public class LogInAdmin implements ILogIn {
     private boolean userIsAdmin;
     @Override
     public void log (User user) {
@@ -13,5 +13,12 @@ public class LogInAdmin extends LogIn {
         // Do something
         return true;
     }
+    public void insertUserInDatabase(User user){
+        // Insert user in database
+    }
 }
-
+// Se está violando el Liskov Substitution Principle - dado que la clase hija LogInAdmin
+// no puede sustituir completamente a la clase padre LogIn sin alterar el comportamiento esperado.
+// Para solucionar esto, se podría cambiar la clase LogIn para que incluya un método
+// que permita verificar si un usuario tiene privilegios de administrador, de modo que
+// LogInAdmin no necesite implementar esta lógica por sí misma.
