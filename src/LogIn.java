@@ -12,6 +12,7 @@ public class LogIn implements ILogIn {
     }
 }
 
+
 class DatabaseManager {
     public void insertUserInDatabase(User user) {
         // Insertar usuario en la base de datos
@@ -22,3 +23,9 @@ class DatabaseManager {
 // ya que se encarga de la lógica de inicio de sesión y también de la gestión de
 // la base de datos a través de la clase DatabaseManager.
 // Se debería dividir esta clase en varias clases con responsabilidades únicas.
+//incumplimiento de LSP debido a que al heredarlo deberia su hijo poder reemplazarlo, no puede adherirse su parte 
+//a la otra
+// pues no pude ser reemplazada sin sufrir cambios
+
+//ESTA MAL QUE SE ACCEDA AL INSERATAR USUARIO EN DATA SOLO EN LOGIN, DEBERIA HABER CLASE PERSONALIZADA PARA ESO
+

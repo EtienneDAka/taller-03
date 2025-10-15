@@ -13,6 +13,9 @@ public class LogInAdmin implements ILogIn {
         // Do something
         return true;
     }
+    public void insertUserInDatabase(User user){
+        // Insert user in database
+    }
 }
 // Se está violando el Liskov Substitution Principle - dado que la clase hija LogInAdmin
 // no puede sustituir completamente a la clase padre LogIn sin alterar el comportamiento esperado.
