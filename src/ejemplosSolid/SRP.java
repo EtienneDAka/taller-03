@@ -4,7 +4,9 @@ import java.util.*;
 
 
 public class SRP {
-    //La clase generador de Reportes tiene mas de una manera de cambiar, o mejor dicho tiene más de una responsabilidad, por lo tanto no cumple SRP
+    //La clase generador de Reportes tiene mas de una manera de cambiar, 
+    // o mejor dicho tiene más de una responsabilidad, 
+    // por lo tanto no cumple SRP
     public class GeneradorDeReportes {
         private String nombreProyecto;
         public GeneradorDeReportes(String nombreProyecto) {
