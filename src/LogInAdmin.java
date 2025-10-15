@@ -13,5 +13,8 @@ public class LogInAdmin extends LogIn {
         // Do something
         return true;
     }
+    public void insertUserInDatabase(User user){
+        // Insert user in database
+    }
 }
 
