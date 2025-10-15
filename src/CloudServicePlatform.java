@@ -1,17 +1,15 @@
-public class CloudServicePlatform {
-    private int cloudServicePlatform;
-    public void hostingTo (AppWeb app) {
-        if (cloudServicePlatform==1) {
-            System.out.println("Connect to AWS");
-            // Logic
-        }if (cloudServicePlatform==2) {
-            System.out.println("Connect to Microsoft Azure");
-            // Logic
-        }else{
-            System.out.println("Connect to Google Cloud");
-            // Logic
-        }
+public class CloudServicePlatform implements ICloudService {
+    private final CloudService cloudService;
+
+    public CloudServicePlatform(CloudService cloudService) {
+        this.cloudService = cloudService;
     }
+
+    public void connect(AppWeb app) {
+        cloudService.connect(app);
+    }
+
     // More Methods
 }
+// Se estaba violando el Open Closed Principle
 
